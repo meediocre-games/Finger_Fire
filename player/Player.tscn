@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://player/Player.gd" type="Script" id=1]
+[ext_resource path="res://player/Bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/Creeds_hand.png" type="Texture" id=3]
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 1 )
+Bullet = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.07, 0.07 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, -70 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -14.9862, -68.9599, -7.255, -67.2243, -4.81806, -62.268, -2.36384, -55.8642, -2.59895, -42.8508, -10.6535, -27.9692, -12.8624, -20.6596, -11.2056, -17.4798, -5.37284, -15.3892, 17.3184, -10.3027, 44.1862, -9.01456, 76.7345, -3.46143, 82.3628, -1.08556, 83.9439, 4.9754, 78.1214, 8.46632, 17.9279, 7.91154, 15.9862, 16.788, 14.5992, 23.168, 8.21925, 29.2705, 8.21925, 37.8696, 2.11668, 44.527, 0.452339, 52.0165, -11.7528, 56.7321, -17.4985, 59.1491, -31.734, 58.1785, -55.999, 53.3255, -80.264, 55.5902, -83.4994, 38.1194, -83.1758, 16.1191, -78.3228, 1.2366, -68.2933, -0.381065, -57.6167, -7.17527, -40.7929, -25.2932, -27.8516, -36.2933, -17.175, -50.2052, -14.5867, -59.2642 )
+
